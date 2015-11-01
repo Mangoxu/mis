@@ -1,0 +1,80 @@
+-- --------------------------------------------------------
+-- 主机:                           127.0.0.1
+-- 服务器版本:                        10.0.17-MariaDB - mariadb.org binary distribution
+-- 服务器操作系统:                      Win64
+-- HeidiSQL 版本:                  9.1.0.4867
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- 导出 express 的数据库结构
+DROP DATABASE IF EXISTS `express`;
+CREATE DATABASE IF NOT EXISTS `express` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `express`;
+
+
+-- 导出  表 express.expressage 结构
+DROP TABLE IF EXISTS `expressage`;
+CREATE TABLE IF NOT EXISTS `expressage` (
+  `Id` int(16) DEFAULT NULL,
+  `Rnumber` int(16) DEFAULT NULL,
+  `Company` varchar(50) DEFAULT NULL,
+  `Rname` varchar(50) DEFAULT NULL,
+  `Rphone` int(11) DEFAULT NULL,
+  `Email` varchar(30) DEFAULT NULL,
+  `Raddress` varchar(50) DEFAULT NULL,
+  `Area` varchar(50) DEFAULT NULL,
+  `Status` varchar(50) DEFAULT NULL,
+  `Remark` varchar(50) DEFAULT NULL,
+  `Receiver` varchar(50) DEFAULT NULL,
+  `Type` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 数据导出被取消选择。
+
+
+-- 导出  表 express.list 结构
+DROP TABLE IF EXISTS `list`;
+CREATE TABLE IF NOT EXISTS `list` (
+  `GoodId` int(16) DEFAULT NULL,
+  `Snum` int(16) DEFAULT NULL,
+  `Sname` varchar(50) DEFAULT NULL,
+  `Saddress` varchar(50) DEFAULT NULL,
+  `Sphone` int(11) DEFAULT NULL,
+  `Rname` varchar(50) DEFAULT NULL,
+  `Raddress` varchar(50) DEFAULT NULL,
+  `Rphone` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 数据导出被取消选择。
+
+
+-- 导出  表 express.manager 结构
+DROP TABLE IF EXISTS `manager`;
+CREATE TABLE IF NOT EXISTS `manager` (
+  `WorkerId` int(16) DEFAULT NULL,
+  `Username` varchar(50) DEFAULT NULL,
+  `Password` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 数据导出被取消选择。
+
+
+-- 导出  表 express.stuent 结构
+DROP TABLE IF EXISTS `stuent`;
+CREATE TABLE IF NOT EXISTS `stuent` (
+  `StudentId` int(15) DEFAULT NULL,
+  `StudentNum` int(8) DEFAULT NULL,
+  `StudentName` varchar(20) DEFAULT NULL,
+  `Sex` tinytext,
+  `StudentPhone` int(11) DEFAULT NULL,
+  `StudentAddress` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 数据导出被取消选择。
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
